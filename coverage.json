@@ -1,0 +1,65 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-03-02T10:08:10.274Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 3,
+    "implemented": 3,
+    "items": [
+      {
+        "id": "REQ-10",
+        "summary": "Add a 'Car Care Kit Box' combo/bundle product entry to the products data in frontend/src/data/products.ts. The bundle includes DBS Car Shine Solution, Scratch Remover Pro, and Nano Gloss Polish. Set a discounted bundle price that is clearly lower than the sum of the three individual product prices. Include a short description that names all three included products and highlights the value/savings.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/data/products.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/data/products.ts"
+        ]
+      },
+      {
+        "id": "REQ-11",
+        "summary": "Display the 'Car Care Kit Box' bundle on the Products page (frontend/src/pages/Products.tsx) using a visually distinct card or badge to indicate it is a combo/bundle deal. The card should list the three included products, show both the original combined price (struck through) and the discounted bundle price, and include a 'BUNDLE DEAL' or 'COMBO' badge. Use the existing ProductCard component or extend it to support a bundle variant. The card should appear at the top or end of the product grid in a highlighted/featured position.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/ProductCard.tsx",
+          "frontend/src/pages/Products.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ProductCard.tsx",
+          "frontend/src/pages/Products.tsx"
+        ]
+      },
+      {
+        "id": "REQ-12",
+        "summary": "Generate a product bundle image for the 'Car Care Kit Box' showing three car care product bottles/containers grouped together as a kit set, styled consistently with the existing product images (clean white background, professional product photography style). Use filename car-care-kit-box.dim_600x600.png and reference it in the Car Care Kit Box product data and card.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/data/products.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/data/products.ts"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/car-care-kit-box.dim_600x600.png",
+    "frontend/src/components/ProductCard.tsx",
+    "frontend/src/data/products.ts",
+    "frontend/src/pages/Products.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "kind": "build_request",
+  "title": "Add 'Car Care Kit Box' Bundle Product to Products Page",
+  "projectName": "REGIS NANO CHEMICALS",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "text": "Add a 'Car Care Kit Box' combo/bundle product entry to the products data in frontend/src/data/products.ts. The bundle includes DBS Car Shine Solution, Scratch Remover Pro, and Nano Gloss Polish. Set a discounted bundle price that is clearly lower than the sum of the three individual product prices. Include a short description that names all three included products and highlights the value/savings.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "ADD ANOTHER COMBO PRODUTCS OPTION OF DBS , SCARTCH REMOVER AND ONE OTHER PRODUCT AS BUNDLE PRICING AT A DISCOUNTED RATE NAMED CARE CARE KIT BOX"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A product named 'Car Care Kit Box' exists in the products data array",
+        "The bundle lists DBS Car Shine Solution, Scratch Remover Pro, and Nano Gloss Polish as included items",
+        "The bundle price is visibly discounted compared to buying the three products individually",
+        "A 'You Save' or original vs. discounted price indicator is shown on the card"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Display the 'Car Care Kit Box' bundle on the Products page (frontend/src/pages/Products.tsx) using a visually distinct card or badge to indicate it is a combo/bundle deal. The card should list the three included products, show both the original combined price (struck through) and the discounted bundle price, and include a 'BUNDLE DEAL' or 'COMBO' badge. Use the existing ProductCard component or extend it to support a bundle variant. The card should appear at the top or end of the product grid in a highlighted/featured position.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "IN PRODUCTS SECTION CAN YOU ALSO ADD ANOTHER COMBO PRODUTCS OPTION",
+          "BUNDLE PRICING AT A DISCOUNTED RATE NAMED CARE CARE KIT BOX"
+        ]
+      },
+      "acceptanceCriteria": [
+        "'Car Care Kit Box' card is visible on the Products page",
+        "Card displays a 'BUNDLE DEAL' or 'COMBO' badge using the brand's yellow or blue accent",
+        "Card lists all three included product names",
+        "Original combined price is shown with a strikethrough and the discounted price is prominently displayed",
+        "Card has the same hover effects (scale/shadow) as other product cards",
+        "A yellow 'Shop Now' button is present on the bundle card"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Generate a product bundle image for the 'Car Care Kit Box' showing three car care product bottles/containers grouped together as a kit set, styled consistently with the existing product images (clean white background, professional product photography style). Use filename car-care-kit-box.dim_600x600.png and reference it in the Car Care Kit Box product data and card.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "NAMED CARE CARE KIT BOX"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Bundle product card displays the car-care-kit-box image",
+        "Image is served from frontend/public/assets/generated/",
+        "Image visually represents a grouped kit of car care products"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui",
+    "Bundle pricing must be a genuine discount — lower than the sum of individual product prices",
+    "Maintain existing product card layout and brand design system (blue #1A3C8F, yellow #F5C518)"
+  ],
+  "nonGoals": [
+    "Do not implement a shopping cart or checkout flow",
+    "Do not add backend persistence for product data",
+    "Do not change prices of the existing four individual products",
+    "Do not add more than one bundle/combo product"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Three car care product bottles grouped together as a bundle kit on a clean white background, professional product photography style with soft shadows (car-care-kit-box.dim_600x600.png)"
+    ],
+    "edits": []
+  }
+}

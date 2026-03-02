@@ -1,0 +1,18 @@
+{
+  "frontend/src/index.css": "Global CSS with OKLCH brand color system (blue primary, yellow accent, black text), Poppins/Inter font imports, smooth scroll, fade-in animations, and utility classes for the REGIS NANO CHEMICALS brand design system.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with Poppins/Inter font families, brand color tokens (blue, yellow, black, gray variants), custom box shadows (card, card-hover, blue, yellow), and animation keyframes.",
+  "frontend/src/data/products.ts": "Static product data for all REGIS NANO products; extended the Product interface with optional bundle fields (isBundle, includedProducts, originalPrice, originalPriceValue) and added the new \"Car Care Kit Box\" combo bundle entry (DBS Car Shine Solution + Scratch Remover Pro + Nano Gloss Polish) at ₹2,699 discounted from ₹3,147.",
+  "frontend/src/data/instructions.ts": "Step-by-step usage instructions for all 4 products, each with icon identifiers and instructional text for the How To Use page.",
+  "frontend/src/hooks/useFadeIn.ts": "Custom React hook using IntersectionObserver to trigger fade-in animations when sections enter the viewport.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for React Query backend hooks (no backend queries needed for this static site).",
+  "frontend/src/components/Header.tsx": "Responsive sticky navigation header with brand logo, nav links to all 5 pages, active link highlighting, mobile hamburger menu, and scroll-aware shadow.",
+  "frontend/src/components/Footer.tsx": "Shared footer with brand identity, quick navigation links, social media icons (Facebook, Instagram, X, YouTube), company contact info, copyright, and caffeine.ai attribution.",
+  "frontend/src/components/Layout.tsx": "Shared layout wrapper using TanStack Router's Outlet, composing Header and Footer around page content with proper padding for the fixed header.",
+  "frontend/src/components/ProductCard.tsx": "Reusable product card component updated to support bundle products — renders a \"BUNDLE DEAL\" badge with a Package icon, a \"Save ₹X\" ribbon, a \"What's Included\" checklist of bundled items, and a strikethrough original price alongside the discounted price; maintains all existing hover/shadow effects and the yellow Shop Now button.",
+  "frontend/src/pages/Home.tsx": "Home page with full-width hero (blue gradient + hero image), brand intro with feature grid, featured products section, and CTA banner — all with fade-in animations.",
+  "frontend/src/pages/About.tsx": "About page with brand story, floating stat cards, Mission & Vision cards, nano-technology stats grid, and quality commitment checklist with blue headings and yellow accents.",
+  "frontend/src/pages/Products.tsx": "Products page updated to separate bundle and individual products; adds a dedicated \"Bundle & Save\" combo section above the main product grid that features the Car Care Kit Box card with a yellow-accented combo offer header, while the individual products grid remains unchanged below.",
+  "frontend/src/pages/HowToUse.tsx": "How To Use page with step-by-step visual instructions for all 4 products using icon-based step cards, alternating blue/yellow color schemes, and pro tips section.",
+  "frontend/src/pages/Contact.tsx": "Contact page with validated contact form (name, email, phone, message), success confirmation state, company details cards, decorative map placeholder, and business hours.",
+  "frontend/src/App.tsx": "Main app entry with TanStack Router setup, defining routes for all 5 pages (/, /about, /products, /how-to-use, /contact) under a shared Layout root route."
+}

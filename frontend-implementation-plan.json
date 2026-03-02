@@ -1,0 +1,64 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add 'Car Care Kit Box' Bundle Product to Products Page",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "summary": "Add 'Car Care Kit Box' bundle product data entry with three included products and discounted pricing",
+      "acceptanceCriteria": [
+        "A product named 'Car Care Kit Box' exists in the products data array",
+        "The bundle lists DBS Car Shine Solution, Scratch Remover Pro, and Nano Gloss Polish as included items",
+        "The bundle price is visibly discounted compared to buying the three products individually",
+        "A 'You Save' or original vs. discounted price indicator is shown on the card"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/products.ts",
+          "operation": "modify",
+          "description": "Extend the Product interface to support bundle product properties (isBundle boolean, includedProducts string array, originalPrice number for strikethrough display). Add a new 'Car Care Kit Box' product entry to the products array with isBundle: true, includedProducts listing 'DBS Car Shine Solution', 'Scratch Remover Pro', and 'Nano Gloss Polish', a discounted price (e.g., ₹2,999 vs. original combined ₹3,600), originalPrice field set to the sum of individual prices, image path 'frontend/public/assets/generated/car-care-kit-box.dim_600x600.png', and a description highlighting the value and savings of the bundle."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Display the 'Car Care Kit Box' bundle on the Products page with a distinct visual treatment and bundle badge",
+      "acceptanceCriteria": [
+        "'Car Care Kit Box' card is visible on the Products page",
+        "Card displays a 'BUNDLE DEAL' or 'COMBO' badge using the brand's yellow or blue accent",
+        "Card lists all three included product names",
+        "Original combined price is shown with a strikethrough and the discounted price is prominently displayed",
+        "Card has the same hover effects (scale/shadow) as other product cards",
+        "A yellow 'Shop Now' button is present on the bundle card"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ProductCard.tsx",
+          "operation": "modify",
+          "description": "Extend ProductCard to accept optional bundle-specific props (isBundle, includedProducts, originalPrice). When isBundle is true, render a 'BUNDLE DEAL' badge (using brand yellow #F5C518) at the top of the card, display the list of includedProducts as bullet points or a compact comma-separated list below the product name, and show both the originalPrice (with strikethrough styling) and the discounted price. Maintain existing hover scale and shadow effects. Ensure the yellow 'Shop Now' button is visible on bundle cards."
+        },
+        {
+          "path": "frontend/src/pages/Products.tsx",
+          "operation": "modify",
+          "description": "Update the Products page to render the 'Car Care Kit Box' bundle using the enhanced ProductCard component. Pass the bundle-specific props (isBundle, includedProducts, originalPrice) to ProductCard for the bundle product entry. Position the bundle card either at the top of the product grid (featured placement) or at the end, ensuring it stands out visually from the four existing individual product cards."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Generate and wire the bundle product image for 'Car Care Kit Box'",
+      "acceptanceCriteria": [
+        "Bundle product card displays the car-care-kit-box image",
+        "Image is served from frontend/public/assets/generated/",
+        "Image visually represents a grouped kit of car care products"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/products.ts",
+          "operation": "modify",
+          "description": "Set the image path for the 'Car Care Kit Box' product entry to 'frontend/public/assets/generated/car-care-kit-box.dim_600x600.png'. This references the generated bundle image showing three car care product bottles grouped together as a kit on a clean white background with professional product photography styling."
+        }
+      ]
+    }
+  ]
+}

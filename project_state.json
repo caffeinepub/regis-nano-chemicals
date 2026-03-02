@@ -1,0 +1,159 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Professional multi-page website for REGIS NANO CHEMICALS, a car care kit products brand. Features blue/yellow/black color scheme, modern minimal design, smooth scrolling, mobile responsive layout, and subtle animations.",
+  "architectural_notes": [
+    "Brand colors: Primary Blue, Secondary Yellow, Text Black, Background White",
+    "Design style: minimal, clean white background, rounded corners, soft shadows, modern typography",
+    "Mobile responsive design with smooth scrolling and subtle animations (fade-in, hover effects)"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Three car care product bottles grouped together as a bundle kit on a clean white background, professional product photography style with soft shadows (car-care-kit-box.dim_600x600.png)",
+  "existing_features": [
+    {
+      "id": "feature-implement-a-global-visual-theme-using-the-brand-s-design-system-primary-color-blue-1a3c8f-or-similar-deep-blue-secondary-accent-color-yellow-f5c518-or-similar-black-body-text-clean-white-backgrounds-modern-sans-serif-typography-e-g-inter-or-poppins-rounded-corners-soft-shadows-and-smooth-scroll-behavior-apply-consistent-spacing-and-white-space-throughout-all-pages",
+      "title": "Implement a global visual theme using the brand's design system: primary color blue (#1A3C8F or similar deep blue), secondary/accent color yellow (#F5C518 or similar), black body text, clean white backgrounds, modern sans-serif typography (e.g. Inter or Poppins), rounded corners, soft shadows, and smooth scroll behavior. Apply consistent spacing and white space throughout all pages.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-multi-page-react-application-with-client-side-routing-supporting-five-views-home-about-products-how-to-use-and-contact-include-a-shared-responsive-navigation-header-with-the-brand-name-regis-nano-chemicals-and-nav-links-to-all-pages-apply-fade-in-entrance-animations-on-page-section-load-and-hover-effects-on-interactive-elements",
+      "title": "Build a multi-page React application with client-side routing supporting five views: Home, About, Products, How To Use, and Contact. Include a shared responsive navigation header with the brand name 'REGIS NANO CHEMICALS' and nav links to all pages. Apply fade-in entrance animations on page/section load and hover effects on interactive elements.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-home-page-with-1-a-large-hero-section-featuring-the-brand-name-regis-nano-chemicals-tagline-advanced-nano-technology-for-superior-car-care-a-yellow-shop-now-cta-button-linking-to-the-products-page-and-a-background-with-subtle-blue-gradient-or-white-with-yellow-accent-lines-2-a-short-brand-introduction-paragraph-below-the-hero-3-a-featured-products-preview-section-showing-all-4-products-with-their-generated-images-and-prices-4-a-view-all-products-button-linking-to-the-products-page",
+      "title": "Create the Home page with: (1) a large hero section featuring the brand name 'REGIS NANO CHEMICALS', tagline 'Advanced Nano Technology for Superior Car Care', a yellow 'Shop Now' CTA button linking to the Products page, and a background with subtle blue gradient or white with yellow accent lines; (2) a short brand introduction paragraph below the hero; (3) a featured products preview section showing all 4 products with their generated images and prices; (4) a 'View All Products' button linking to the Products page.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-about-page-with-the-section-title-about-regis-nano-chemicals-include-a-brand-story-narrative-a-mission-vision-section-a-section-highlighting-nano-technology-innovation-and-a-section-on-commitment-to-quality-and-performance-use-blue-for-headings-and-yellow-highlight-accents-e-g-underlines-borders-or-icon-accents",
+      "title": "Create the About page with the section title 'About REGIS NANO CHEMICALS'. Include: a brand story narrative, a Mission & Vision section, a section highlighting nano-technology innovation, and a section on commitment to quality and performance. Use blue for headings and yellow highlight accents (e.g. underlines, borders, or icon accents).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-products-page-displaying-all-4-products-in-a-responsive-card-grid-each-card-includes-the-product-s-generated-image-product-name-a-short-description-price-displayed-clearly-below-the-product-name-and-a-yellow-shop-now-button-cards-have-hover-effects-scale-or-shadow-lift-and-subtle-shadows-products-1-dbs-car-shine-solution-2-scratch-remover-pro-3-nano-gloss-polish-4-interior-shield-protectant",
+      "title": "Create the Products page displaying all 4 products in a responsive card grid. Each card includes: the product's generated image, product name, a short description, price displayed clearly below the product name, and a yellow 'Shop Now' button. Cards have hover effects (scale or shadow lift) and subtle shadows. Products: (1) DBS Car Shine Solution, (2) Scratch Remover Pro, (3) Nano Gloss Polish, (4) Interior Shield Protectant.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-how-to-use-our-products-page-with-step-by-step-instructions-for-each-of-the-4-products-each-product-section-should-have-the-product-name-as-a-heading-and-a-numbered-list-of-steps-with-a-small-icon-per-step-use-the-following-steps-dbs-car-shine-solution-1-wash-the-car-surface-properly-2-dry-the-surface-completely-3-apply-small-amount-using-microfiber-cloth-4-spread-evenly-in-circular-motion-5-buff-for-glossy-finish-provide-similarly-structured-4-5-step-instructions-for-scratch-remover-pro-nano-gloss-polish-and-interior-shield-protectant",
+      "title": "Create a 'How To Use Our Products' page with step-by-step instructions for each of the 4 products. Each product section should have the product name as a heading and a numbered list of steps with a small icon per step. Use the following steps: DBS Car Shine Solution – (1) Wash the car surface properly, (2) Dry the surface completely, (3) Apply small amount using microfiber cloth, (4) Spread evenly in circular motion, (5) Buff for glossy finish. Provide similarly structured 4–5 step instructions for Scratch Remover Pro, Nano Gloss Polish, and Interior Shield Protectant.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-contact-us-page-with-1-a-customer-contact-form-with-fields-for-full-name-email-phone-number-message-and-a-yellow-submit-button-form-submissions-stored-locally-in-state-with-a-success-confirmation-message-2-a-company-details-section-showing-email-info-regisnanochemicals-com-phone-91-xxxxxxxxxx-location-india-3-an-optional-decorative-map-placeholder-section",
+      "title": "Create the Contact Us page with: (1) a customer contact form with fields for Full Name, Email, Phone Number, Message, and a yellow 'Submit' button (form submissions stored locally in state with a success confirmation message); (2) a company details section showing Email: info@regisnanochemicals.com, Phone: +91-XXXXXXXXXX, Location: India; (3) an optional decorative map placeholder section.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-shared-footer-displayed-on-all-pages-containing-the-brand-name-regis-nano-chemicals-quick-navigation-links-home-about-products-contact-social-media-icons-facebook-instagram-twitter-x-and-a-copyright-line-2024-regis-nano-chemicals-all-rights-reserved",
+      "title": "Add a shared footer displayed on all pages containing: the brand name 'REGIS NANO CHEMICALS', quick navigation links (Home | About | Products | Contact), social media icons (Facebook, Instagram, Twitter/X), and a copyright line '© 2024 REGIS NANO CHEMICALS. All rights reserved.'",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-4-generated-product-images-and-1-hero-background-image-as-static-assets-served-from-frontend-public-assets-generated-reference-them-in-the-products-page-cards-the-home-page-featured-products-preview-and-the-home-page-hero-section",
+      "title": "Render the 4 generated product images and 1 hero background image as static assets served from frontend/public/assets/generated. Reference them in the Products page cards, the Home page featured products preview, and the Home page hero section.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-car-care-kit-box-combo-bundle-product-entry-to-the-products-data-in-frontend-src-data-products-ts-the-bundle-includes-dbs-car-shine-solution-scratch-remover-pro-and-nano-gloss-polish-set-a-discounted-bundle-price-that-is-clearly-lower-than-the-sum-of-the-three-individual-product-prices-include-a-short-description-that-names-all-three-included-products-and-highlights-the-value-savings",
+      "title": "Add a 'Car Care Kit Box' combo/bundle product entry to the products data in frontend/src/data/products.ts. The bundle includes DBS Car Shine Solution, Scratch Remover Pro, and Nano Gloss Polish. Set a discounted bundle price that is clearly lower than the sum of the three individual product prices. Include a short description that names all three included products and highlights the value/savings.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-the-car-care-kit-box-bundle-on-the-products-page-frontend-src-pages-products-tsx-using-a-visually-distinct-card-or-badge-to-indicate-it-is-a-combo-bundle-deal-the-card-should-list-the-three-included-products-show-both-the-original-combined-price-struck-through-and-the-discounted-bundle-price-and-include-a-bundle-deal-or-combo-badge-use-the-existing-productcard-component-or-extend-it-to-support-a-bundle-variant-the-card-should-appear-at-the-top-or-end-of-the-product-grid-in-a-highlighted-featured-position",
+      "title": "Display the 'Car Care Kit Box' bundle on the Products page (frontend/src/pages/Products.tsx) using a visually distinct card or badge to indicate it is a combo/bundle deal. The card should list the three included products, show both the original combined price (struck through) and the discounted bundle price, and include a 'BUNDLE DEAL' or 'COMBO' badge. Use the existing ProductCard component or extend it to support a bundle variant. The card should appear at the top or end of the product grid in a highlighted/featured position.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-a-product-bundle-image-for-the-car-care-kit-box-showing-three-car-care-product-bottles-containers-grouped-together-as-a-kit-set-styled-consistently-with-the-existing-product-images-clean-white-background-professional-product-photography-style-use-filename-car-care-kit-box-dim-600x600-png-and-reference-it-in-the-car-care-kit-box-product-data-and-card",
+      "title": "Generate a product bundle image for the 'Car Care Kit Box' showing three car care product bottles/containers grouped together as a kit set, styled consistently with the existing product images (clean white background, professional product photography style). Use filename car-care-kit-box.dim_600x600.png and reference it in the Car Care Kit Box product data and card.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Home page with hero section, brand intro, featured products preview, and Shop Now CTA",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "About page with brand story, mission & vision, nano-technology focus, and quality commitment",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Products page with 4 product cards (DBS Car Shine Solution, Scratch Remover Pro, Nano Gloss Polish, Interior Shield Protectant) including image, name, description, price, hover effects",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "How To Use section with step-by-step instructions and icons for each product",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Contact Us page with customer form (name, email, phone, message) and company details",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Shared footer on all pages with brand name, quick links, social media icons, and copyright",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add 'Car Care Kit Box' combo/bundle product on Products page combining DBS Car Shine Solution, Scratch Remover Pro, and one other product at a discounted bundle price",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "REGIS NANO CHEMICALS",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
