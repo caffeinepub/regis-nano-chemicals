@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Brand Colors */
+    --brand-blue: 0.38 0.15 250;
+    --brand-blue-dark: 0.28 0.14 250;
+    --brand-blue-light: 0.55 0.12 250;
+    --brand-yellow: 0.82 0.18 85;
+    --brand-yellow-dark: 0.72 0.18 85;
+    --brand-black: 0.12 0 0;
+    --brand-white: 1 0 0;
+    --brand-gray: 0.96 0 0;
+    --brand-gray-mid: 0.88 0 0;
+    --brand-gray-text: 0.45 0 0;
+
+    /* Shadcn tokens mapped to brand */
+    --background: 1 0 0;
+    --foreground: 0.12 0 0;
+    --card: 1 0 0;
+    --card-foreground: 0.12 0 0;
+    --popover: 1 0 0;
+    --popover-foreground: 0.12 0 0;
+    --primary: 0.38 0.15 250;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.82 0.18 85;
+    --secondary-foreground: 0.12 0 0;
+    --muted: 0.96 0 0;
+    --muted-foreground: 0.45 0 0;
+    --accent: 0.82 0.18 85;
+    --accent-foreground: 0.12 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.88 0 0;
+    --input: 0.88 0 0;
+    --ring: 0.38 0.15 250;
+    --chart-1: 0.38 0.15 250;
+    --chart-2: 0.82 0.18 85;
+    --chart-3: 0.55 0.12 250;
+    --chart-4: 0.72 0.18 85;
+    --chart-5: 0.28 0.14 250;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.12 0 0;
+    --sidebar-primary: 0.38 0.15 250;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.96 0 0;
+    --sidebar-accent-foreground: 0.12 0 0;
+    --sidebar-border: 0.88 0 0;
+    --sidebar-ring: 0.38 0.15 250;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@layer utilities {
+  .fade-in {
+    animation: fadeIn 0.7s ease-out forwards;
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 0.7s ease-out forwards;
+  }
+
+  .fade-in-delay-1 {
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out 0.1s forwards;
+  }
+
+  .fade-in-delay-2 {
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out 0.2s forwards;
+  }
+
+  .fade-in-delay-3 {
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out 0.3s forwards;
+  }
+
+  .fade-in-delay-4 {
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out 0.4s forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+
+  @keyframes pearlGlow {
+    0%,
+    100% {
+      text-shadow: 0 0 20px oklch(0.82 0.18 85 / 0.3), 0 0 40px
+        oklch(0.82 0.18 85 / 0.15);
+    }
+    50% {
+      text-shadow: 0 0 30px oklch(0.82 0.18 85 / 0.5), 0 0 60px
+        oklch(0.82 0.18 85 / 0.25), 0 0 80px oklch(0.95 0.05 85 / 0.2);
+    }
+  }
+
+  .section-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .section-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.28 0.14 250) 0%,
+      oklch(0.38 0.15 250) 50%,
+      oklch(0.45 0.13 240) 100%
+    );
+  }
+
+  .yellow-btn {
+    background-color: oklch(0.82 0.18 85);
+    color: oklch(0.12 0 0);
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  }
+
+  .yellow-btn:hover {
+    background-color: oklch(0.72 0.18 85);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px oklch(0.82 0.18 85 / 0.4);
+  }
+
+  .blue-heading {
+    color: oklch(0.38 0.15 250);
+    font-family: "Poppins", sans-serif;
+  }
+
+  .yellow-accent-line {
+    display: inline-block;
+    border-bottom: 3px solid oklch(0.82 0.18 85);
+    padding-bottom: 4px;
+  }
+
+  /* Pearl Shine hero brand name — solid white, bold, premium */
+  .hero-brand-name {
+    font-family: "Playfair Display", "Georgia", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0 2px 30px rgba(255, 255, 255, 0.25), 0 0 60px
+      rgba(255, 255, 255, 0.1);
+    letter-spacing: 0.02em;
+  }
+
+  /* Pearl Shine tagline */
+  .hero-tagline {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .hero-tagline-word {
+    color: oklch(1 0 0);
+  }
+
+  .hero-tagline-dash {
+    color: oklch(0.82 0.18 85);
+    margin: 0 0.3em;
+    font-weight: 700;
+  }
+
+  /* Decorative separator */
+  .hero-separator {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-separator::before,
+  .hero-separator::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      oklch(0.82 0.18 85 / 0.6),
+      transparent
+    );
+  }
+
+  .hero-separator-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: oklch(0.82 0.18 85);
+    box-shadow: 0 0 8px oklch(0.82 0.18 85 / 0.8);
+  }
+
+  /* ── Dynamic hero background ── */
+  .hero-dynamic-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.18;
+  }
+
+  /* Light streaks */
+  .light-streak {
+    position: absolute;
+    height: 1px;
+    border-radius: 9999px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      oklch(1 0 0 / 0.9),
+      transparent
+    );
+    animation: streakSlide linear infinite;
+  }
+
+  .light-streak-1 {
+    width: 35%;
+    top: 15%;
+    left: -35%;
+    animation-duration: 12s;
+    animation-delay: 0s;
+    transform: rotate(-8deg);
+  }
+  .light-streak-2 {
+    width: 25%;
+    top: 35%;
+    left: -25%;
+    animation-duration: 16s;
+    animation-delay: -4s;
+    transform: rotate(-5deg);
+  }
+  .light-streak-3 {
+    width: 40%;
+    top: 55%;
+    left: -40%;
+    animation-duration: 14s;
+    animation-delay: -8s;
+    transform: rotate(-10deg);
+  }
+  .light-streak-4 {
+    width: 20%;
+    top: 25%;
+    right: -20%;
+    left: auto;
+    animation-duration: 18s;
+    animation-delay: -2s;
+    transform: rotate(6deg);
+    animation-name: streakSlideRight;
+  }
+  .light-streak-5 {
+    width: 30%;
+    top: 65%;
+    left: -30%;
+    animation-duration: 20s;
+    animation-delay: -10s;
+    transform: rotate(-6deg);
+  }
+  .light-streak-6 {
+    width: 45%;
+    top: 80%;
+    left: -45%;
+    animation-duration: 22s;
+    animation-delay: -6s;
+    transform: rotate(-4deg);
+  }
+
+  @keyframes streakSlide {
+    from {
+      transform: translateX(0) rotate(-8deg);
+    }
+    to {
+      transform: translateX(250vw) rotate(-8deg);
+    }
+  }
+
+  @keyframes streakSlideRight {
+    from {
+      transform: translateX(0) rotate(6deg);
+    }
+    to {
+      transform: translateX(-250vw) rotate(6deg);
+    }
+  }
+
+  /* Water drops */
+  .water-drop {
+    position: absolute;
+    border-radius: 50% 40% 60% 40%;
+    background: radial-gradient(
+      circle at 35% 35%,
+      oklch(1 0 0 / 0.6),
+      oklch(0.7 0.1 220 / 0.2)
+    );
+    border: 1px solid oklch(1 0 0 / 0.3);
+    animation: dropFloat ease-in-out infinite;
+  }
+
+  .water-drop-1 {
+    width: 18px;
+    height: 24px;
+    top: 20%;
+    left: 65%;
+    animation-duration: 8s;
+    animation-delay: 0s;
+  }
+  .water-drop-2 {
+    width: 12px;
+    height: 16px;
+    top: 50%;
+    left: 75%;
+    animation-duration: 10s;
+    animation-delay: -3s;
+  }
+  .water-drop-3 {
+    width: 22px;
+    height: 30px;
+    top: 70%;
+    left: 55%;
+    animation-duration: 12s;
+    animation-delay: -6s;
+  }
+
+  @keyframes dropFloat {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateY(-20px) scale(1.05);
+      opacity: 1;
+    }
+  }
+
+  /* Glow pulses */
+  .glow-pulse {
+    position: absolute;
+    border-radius: 50%;
+    animation: glowPulse ease-in-out infinite;
+  }
+
+  .glow-pulse-1 {
+    width: 500px;
+    height: 500px;
+    top: -100px;
+    right: 5%;
+    background: radial-gradient(
+      circle,
+      oklch(0.82 0.18 85 / 0.12) 0%,
+      transparent 70%
+    );
+    animation-duration: 8s;
+  }
+  .glow-pulse-2 {
+    width: 350px;
+    height: 350px;
+    bottom: -50px;
+    right: 25%;
+    background: radial-gradient(
+      circle,
+      oklch(0.7 0.1 220 / 0.15) 0%,
+      transparent 70%
+    );
+    animation-duration: 11s;
+    animation-delay: -4s;
+  }
+
+  @keyframes glowPulse {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    50% {
+      transform: scale(1.15);
+      opacity: 1;
+    }
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    .water-drop-1,
+    .water-drop-2,
+    .water-drop-3 {
+      display: none;
+    }
+
+    .glow-pulse-1 {
+      width: 300px;
+      height: 300px;
+    }
+
+    .glow-pulse-2 {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
