@@ -17,9 +17,8 @@ function FadeSection({
 }
 
 const values = [
-  { icon: CheckCircle2, text: "ISO-compliant manufacturing processes" },
   { icon: CheckCircle2, text: "Rigorously tested on all paint types" },
-  { icon: CheckCircle2, text: "Eco-friendly, biodegradable formulas" },
+  { icon: CheckCircle2, text: "Eco-friendly formulas" },
   { icon: CheckCircle2, text: "No harmful solvents or abrasives" },
   { icon: CheckCircle2, text: "Trusted by 10,000+ customers across India" },
   { icon: CheckCircle2, text: "Professional detailer approved" },
@@ -28,7 +27,6 @@ const values = [
 export default function About() {
   return (
     <div className="overflow-x-hidden">
-      {/* Page Hero */}
       <div
         className="py-20 lg:py-28 relative overflow-hidden"
         style={{
@@ -44,22 +42,19 @@ export default function About() {
             backgroundSize: "cover",
           }}
         />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center">
-            <span className="inline-block text-brand-yellow font-poppins font-600 text-sm uppercase tracking-widest mb-4 fade-in-delay-1">
-              Our Story
-            </span>
-            <h1 className="font-poppins font-900 text-white text-4xl sm:text-5xl lg:text-6xl fade-in-delay-2">
-              About <span className="text-brand-yellow">Pearl Shine</span>
-            </h1>
-            <p className="text-white/70 font-inter text-base mt-4 max-w-xl mx-auto fade-in-delay-3">
-              Cleans – Shines – Protects
-            </p>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+          <span className="inline-block text-brand-yellow font-poppins font-600 text-sm uppercase tracking-widest mb-4 fade-in-delay-1">
+            Our Story
+          </span>
+          <h1 className="font-poppins font-900 text-white text-4xl sm:text-5xl lg:text-6xl fade-in-delay-2">
+            About <span className="text-brand-yellow">Pearl Shine</span>
+          </h1>
+          <p className="text-white/70 font-inter text-base mt-4 fade-in-delay-3">
+            Cleans · Shines · Protects
+          </p>
         </div>
       </div>
 
-      {/* Brand Story */}
       <FadeSection className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -76,16 +71,15 @@ export default function About() {
                   Pearl Shine was founded with a singular vision: to bring
                   professional-grade, nano-technology car care products to every
                   car owner in India. What began as a small research initiative
-                  by a team of automotive chemists and detailing enthusiasts has
-                  grown into one of India's most trusted car care brands.
+                  by automotive chemists and detailing enthusiasts has grown
+                  into one of India's most trusted car care brands.
                 </p>
                 <p>
                   Our founders recognized a gap in the market — car owners
                   deserved access to the same advanced formulations used by
                   professional detailers, at accessible prices. By harnessing
                   the power of nano-particle science, we developed a product
-                  line that delivers results previously only achievable in
-                  high-end detailing studios.
+                  line that delivers showroom results at home.
                 </p>
                 <p>
                   Today, Pearl Shine serves thousands of satisfied customers
@@ -99,7 +93,7 @@ export default function About() {
               <div className="rounded-2xl overflow-hidden shadow-card-hover">
                 <img
                   src="/assets/generated/hero-banner.dim_1600x700.png"
-                  alt="Pearl Shine - Car Care Excellence"
+                  alt="Pearl Shine – Car Care Excellence"
                   className="w-full h-80 object-cover"
                 />
               </div>
@@ -113,7 +107,7 @@ export default function About() {
               </div>
               <div className="absolute -top-6 -right-6 bg-brand-yellow rounded-2xl shadow-yellow p-5">
                 <p className="font-poppins font-800 text-brand-black text-3xl">
-                  4+
+                  7+
                 </p>
                 <p className="text-brand-black/70 text-sm font-inter">
                   Years of Innovation
@@ -124,7 +118,6 @@ export default function About() {
         </div>
       </FadeSection>
 
-      {/* Mission & Vision */}
       <FadeSection className="py-20 bg-brand-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
@@ -132,7 +125,7 @@ export default function About() {
               Our Purpose
             </span>
             <h2 className="font-poppins font-800 text-brand-blue text-3xl sm:text-4xl">
-              Mission &amp; Vision
+              Mission & Vision
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -145,11 +138,9 @@ export default function About() {
                 Our Mission
               </h3>
               <p className="text-brand-gray-text font-inter text-base leading-relaxed">
-                To democratize professional car care by making advanced
-                nano-technology formulations accessible to every car owner in
-                India. We are committed to delivering products that combine
-                scientific innovation with ease of use, empowering individuals
-                to achieve professional detailing results at home.
+                To make advanced nano-technology car care accessible to every
+                car owner in India, delivering products that combine scientific
+                innovation with ease of use for professional results at home.
               </p>
             </div>
             <div className="bg-brand-blue rounded-2xl p-8 shadow-blue hover:shadow-card-hover transition-shadow duration-300">
@@ -162,17 +153,14 @@ export default function About() {
               </h3>
               <p className="text-white/80 font-inter text-base leading-relaxed">
                 To become India's most innovative and trusted car care brand,
-                recognized globally for our pioneering use of nano-technology.
-                We envision a future where every vehicle on Indian roads
-                benefits from our advanced protection solutions, setting new
-                standards for automotive care excellence.
+                recognized for our pioneering use of nano-technology — setting
+                new standards for automotive care excellence nationwide.
               </p>
             </div>
           </div>
         </div>
       </FadeSection>
 
-      {/* Nano Technology */}
       <FadeSection className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -184,16 +172,16 @@ export default function About() {
                     value: "< 100nm",
                     sub: "Ultra-fine protection",
                   },
-                  {
-                    label: "Bond Strength",
-                    value: "9H",
-                    sub: "Hardness rating",
-                  },
                   { label: "UV Protection", value: "99%", sub: "Rays blocked" },
                   {
                     label: "Durability",
                     value: "12mo",
                     sub: "Long-lasting shine",
+                  },
+                  {
+                    label: "Happy Customers",
+                    value: "10K+",
+                    sub: "Across India",
                   },
                 ].map(({ label, value, sub }) => (
                   <div
@@ -224,18 +212,15 @@ export default function About() {
               <div className="space-y-4 text-brand-gray-text font-inter text-base leading-relaxed">
                 <p>
                   At the heart of every Pearl Shine product lies our proprietary
-                  nano-particle technology. Unlike conventional car care
-                  products that sit on the surface, our nano-formulas penetrate
-                  at the molecular level, creating an invisible shield that
-                  bonds directly with your vehicle's paint, glass, and interior
-                  surfaces.
+                  nano-particle technology. Our nano-formulas penetrate at the
+                  molecular level, creating an invisible shield bonded directly
+                  with your vehicle's paint, glass, and interior surfaces.
                 </p>
                 <p>
                   Our nano-particles, measuring less than 100 nanometers, fill
                   microscopic imperfections in paint surfaces, creating a
-                  perfectly smooth, hydrophobic layer that repels water, dirt,
-                  UV rays, and environmental contaminants with unprecedented
-                  effectiveness.
+                  hydrophobic layer that repels water, dirt, UV rays, and
+                  environmental contaminants.
                 </p>
               </div>
               <div className="mt-6 flex items-center gap-3 p-4 bg-brand-blue/5 rounded-xl border border-brand-blue/20">
@@ -250,7 +235,6 @@ export default function About() {
         </div>
       </FadeSection>
 
-      {/* Quality Commitment */}
       <FadeSection className="py-20 bg-brand-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
@@ -261,9 +245,9 @@ export default function About() {
               Commitment to Quality
             </h2>
             <p className="text-brand-gray-text font-inter text-base max-w-2xl mx-auto">
-              Every product that leaves our facility undergoes rigorous quality
-              testing to ensure it meets our exacting standards for performance,
-              safety, and environmental responsibility.
+              Every Pearl Shine product undergoes rigorous testing to ensure it
+              meets our exacting standards for performance, safety, and
+              environmental responsibility.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">

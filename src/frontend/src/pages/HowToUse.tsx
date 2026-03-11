@@ -50,7 +50,6 @@ function FadeSection({
 export default function HowToUse() {
   return (
     <div className="overflow-x-hidden">
-      {/* Page Hero */}
       <div
         className="py-20 lg:py-28 relative overflow-hidden"
         style={{
@@ -67,12 +66,11 @@ export default function HowToUse() {
           </h1>
           <p className="text-white/70 font-inter text-base mt-4 max-w-xl mx-auto fade-in-delay-3">
             Follow these simple step-by-step instructions to get the best
-            results from every REGIS NANO product.
+            results from every Pearl Shine product.
           </p>
         </div>
       </div>
 
-      {/* Instructions */}
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
@@ -83,7 +81,6 @@ export default function HowToUse() {
                     productIndex % 2 === 0 ? "bg-white" : "bg-brand-gray"
                   }`}
                 >
-                  {/* Product Header */}
                   <div
                     className="px-8 py-6 flex items-center gap-4"
                     style={{
@@ -113,21 +110,18 @@ export default function HowToUse() {
                     </h2>
                   </div>
 
-                  {/* Steps */}
                   <div className="p-8">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
                       {product.steps.map((step, stepIndex) => {
                         const IconComponent = iconMap[step.icon] || Sparkles;
                         return (
                           <div
-                            key={`step-${step.icon}-${stepIndex}`}
+                            key={step.text}
                             className="relative flex flex-col items-center text-center group"
                           >
-                            {/* Connector line */}
                             {stepIndex < product.steps.length - 1 && (
                               <div className="hidden lg:block absolute top-8 left-1/2 w-full h-0.5 bg-brand-gray-mid z-0" />
                             )}
-                            {/* Step circle */}
                             <div
                               className={`relative z-10 w-16 h-16 rounded-2xl flex items-center justify-center mb-4 shadow-card group-hover:scale-110 transition-transform duration-200 ${
                                 product.color === "blue"
@@ -137,7 +131,6 @@ export default function HowToUse() {
                             >
                               <IconComponent className="w-7 h-7" />
                             </div>
-                            {/* Step number badge */}
                             <div
                               className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-poppins font-700 mb-3 ${
                                 product.color === "blue"
@@ -162,7 +155,6 @@ export default function HowToUse() {
         </div>
       </div>
 
-      {/* Tips Section */}
       <FadeSection className="py-20 bg-brand-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -218,7 +210,6 @@ export default function HowToUse() {
         </div>
       </FadeSection>
 
-      {/* CTA */}
       <FadeSection>
         <div
           className="py-16"
@@ -232,14 +223,13 @@ export default function HowToUse() {
               Ready to Get Started?
             </h2>
             <p className="text-white/70 font-inter text-base mb-6 max-w-md mx-auto">
-              Shop our full range of nano-technology car care products today.
+              Shop our full range of Pearl Shine car care products today.
             </p>
             <Link
               to="/products"
               className="yellow-btn inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-poppins font-700 shadow-yellow"
             >
-              Shop Products
-              <ArrowRight className="w-5 h-5" />
+              Shop Products <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>

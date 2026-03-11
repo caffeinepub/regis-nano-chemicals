@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Droplets, Heart } from "lucide-react";
-import { SiFacebook, SiInstagram, SiX, SiYoutube } from "react-icons/si";
+import { Heart } from "lucide-react";
+import { SiFacebook, SiInstagram, SiYoutube } from "react-icons/si";
 
 const quickLinks = [
   { label: "Home", path: "/" },
@@ -12,8 +12,11 @@ const quickLinks = [
 
 const socialLinks = [
   { icon: SiFacebook, label: "Facebook", href: "#" },
-  { icon: SiInstagram, label: "Instagram", href: "#" },
-  { icon: SiX, label: "X (Twitter)", href: "#" },
+  {
+    icon: SiInstagram,
+    label: "Instagram",
+    href: "https://www.instagram.com/regis_nano_chemicals",
+  },
   { icon: SiYoutube, label: "YouTube", href: "#" },
 ];
 
@@ -32,25 +35,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-lg bg-brand-yellow flex items-center justify-center">
-                <Droplets
-                  className="w-5 h-5 text-brand-blue-dark"
-                  fill="currentColor"
-                />
-              </div>
-              <div className="flex flex-col leading-tight">
-                <span className="font-poppins font-800 text-white text-sm tracking-wider uppercase leading-none">
-                  Pearl Shine
-                </span>
-                <span className="font-poppins font-400 text-white/60 text-[10px] tracking-wide leading-none mt-0.5">
-                  Cleans – Shines – Protects
-                </span>
-              </div>
+            <div>
+              <img
+                src="/assets/uploads/IMG_6702-1.jpg"
+                alt="Pearl Shine Logo"
+                className="h-14 w-auto object-contain"
+              />
             </div>
             <p className="text-white/70 text-sm leading-relaxed font-inter max-w-xs">
-              Advanced nano-technology solutions for superior car care. Trusted
-              by professionals across India.
+              Premium nano-technology solutions for superior car care. Trusted
+              by customers across India.
             </p>
             {/* Social Icons */}
             <div className="flex items-center gap-3 pt-2">
@@ -59,6 +53,8 @@ export default function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 rounded-lg bg-white/10 hover:bg-brand-yellow hover:text-brand-blue-dark flex items-center justify-center transition-all duration-200 text-white/80"
                 >
                   <Icon className="w-4 h-4" />
@@ -106,13 +102,27 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <span className="text-brand-yellow font-500">Phone:</span>
+                <span className="text-brand-yellow font-500">
+                  Phone / WhatsApp:
+                </span>
                 <br />
                 <a
-                  href="tel:+919353240921"
+                  href="tel:+917483540921"
                   className="hover:text-white transition-colors"
                 >
-                  +91 9353240921
+                  +91 7483540921
+                </a>
+              </li>
+              <li>
+                <span className="text-brand-yellow font-500">Instagram:</span>
+                <br />
+                <a
+                  href="https://www.instagram.com/regis_nano_chemicals"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  @regis_nano_chemicals
                 </a>
               </li>
               <li>

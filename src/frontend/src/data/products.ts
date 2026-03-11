@@ -6,9 +6,6 @@ export interface Product {
   priceValue: number;
   image: string;
   badge?: string;
-  benefits?: string[];
-  usageSteps?: string[];
-  safetyInfo?: string;
   // Bundle-specific fields
   isBundle?: boolean;
   includedProducts?: string[];
@@ -18,125 +15,50 @@ export interface Product {
 
 export const products: Product[] = [
   {
-    id: "dbs-car-shine",
-    name: "DBS Car Shine Solution",
+    id: "dashboard-shiner",
+    name: "Dashboard Shiner",
     description:
-      "Advanced nano-formula spray that delivers a deep, mirror-like shine. Repels water, dust, and UV rays for long-lasting protection.",
-    price: "₹899",
-    priceValue: 899,
-    image: "/assets/generated/dbs-car-shine.dim_600x600.png",
+      "Premium dashboard shiner that restores shine, protects surfaces, and leaves a fresh fragrance inside the car.",
+    price: "\u20b9599",
+    priceValue: 599,
+    image: "/assets/uploads/98F04110-73EB-46F8-B3F6-688E519164EF-2-1.PNG",
+    badge: "Most Bought",
+  },
+  {
+    id: "stain-remover",
+    name: "Stain Remover",
+    description:
+      "Powerful stain remover designed to clean tough stains from car interiors, fabrics, and surfaces.",
+    price: "\u20b9399",
+    priceValue: 399,
+    image: "/assets/uploads/61BB4BA7-DB70-4543-8EDF-94229CC01B97-4-1.PNG",
     badge: "Best Seller",
-    benefits: [
-      "Deep mirror-like shine",
-      "UV ray protection",
-      "Hydrophobic water repellent",
-      "Long-lasting up to 6 months",
-    ],
-    usageSteps: [
-      "Wash and dry the car thoroughly",
-      "Apply small amount on microfiber cloth",
-      "Spread in circular motions on one panel at a time",
-      "Allow to haze for 2–3 minutes",
-      "Buff off with a clean microfiber cloth",
-    ],
-    safetyInfo: "Keep away from eyes. Store in a cool dry place.",
   },
   {
-    id: "scratch-remover-pro",
-    name: "Scratch Remover Pro",
+    id: "waterless-spray-cleaner",
+    name: "Waterless Spray Cleaner",
     description:
-      "Professional-grade compound that eliminates light scratches, swirl marks, and oxidation, restoring your car's original finish.",
-    price: "₹1,199",
-    priceValue: 1199,
-    image: "/assets/generated/scratch-remover-pro.dim_600x600.png",
-    badge: "New",
-    benefits: [
-      "Removes light scratches and swirl marks",
-      "Restores original paint finish",
-      "Removes oxidation",
-      "Professional-grade formula",
-    ],
-    usageSteps: [
-      "Clean the scratched area",
-      "Apply a small amount on applicator pad",
-      "Work in circular motions with light pressure",
-      "Wipe off residue with microfiber cloth",
-      "Apply car shine for protection",
-    ],
-    safetyInfo: "Avoid contact with eyes. Wear gloves when handling.",
+      "Advanced waterless car cleaning solution that removes dirt while providing body coating and glass lamination protection. Trigger included.",
+    price: "\u20b9499",
+    priceValue: 499,
+    image: "/assets/uploads/4E3EAE52-386F-49CA-88ED-1DB1713C5F71-4-2.PNG",
   },
   {
-    id: "nano-gloss-polish",
-    name: "Nano Gloss Polish",
+    id: "car-care-kit",
+    name: "Car Care Kit",
     description:
-      "Nano-particle infused polish that fills micro-scratches and creates an ultra-glossy, showroom-quality finish that lasts months.",
-    price: "₹1,049",
-    priceValue: 1049,
-    image: "/assets/generated/nano-gloss-polish.dim_600x600.png",
-    benefits: [
-      "Ultra-glossy showroom finish",
-      "Fills micro-scratches",
-      "Nano-particle bonding",
-      "Lasts months",
-    ],
-    usageSteps: [
-      "Wash and clay bar if needed",
-      "Apply polish on foam applicator",
-      "Work in overlapping circular motions",
-      "Allow to cure for 5 minutes",
-      "Buff with clean microfiber",
-    ],
-    safetyInfo: "Use in a shaded area. Not for use on matte paint.",
-  },
-  {
-    id: "interior-shield",
-    name: "Interior Shield Protectant",
-    description:
-      "Premium interior protectant that shields dashboards, seats, and trim from UV damage, cracking, and fading with a satin finish.",
-    price: "₹749",
-    priceValue: 749,
-    image: "/assets/generated/interior-shield-protectant.dim_600x600.png",
-    benefits: [
-      "UV protection for interiors",
-      "Prevents cracking and fading",
-      "Satin matte finish",
-      "Safe for all surfaces",
-    ],
-    usageSteps: [
-      "Clean the interior surface",
-      "Spray onto microfiber cloth",
-      "Wipe surfaces evenly",
-      "Allow to dry for 5 minutes",
-      "Buff lightly for even finish",
-    ],
-  },
-  {
-    id: "car-care-kit-box",
-    name: "Car Care Kit Box",
-    description:
-      "The ultimate all-in-one car care bundle — everything you need for a showroom finish at home. Save big with our exclusive combo deal.",
-    price: "₹2,699",
-    priceValue: 2699,
-    originalPrice: "₹3,147",
-    originalPriceValue: 3147,
-    image: "/assets/generated/car-care-kit-box.dim_600x600.png",
+      "Complete Pearl Shine Car Care Kit \u2014 the perfect all-in-one solution for complete car cleaning and protection.",
+    price: "\u20b91,399",
+    priceValue: 1399,
+    originalPrice: "\u20b91,499",
+    originalPriceValue: 1499,
+    image: "/assets/uploads/638A504A-6A42-49E8-A6C5-4DE117896FDE-4-3.PNG",
     badge: "Bundle Deal",
     isBundle: true,
     includedProducts: [
-      "DBS Car Shine Solution",
-      "Scratch Remover Pro",
-      "Nano Gloss Polish",
-    ],
-    benefits: [
-      "Complete car care solution",
-      "Save ₹448 vs buying individually",
-      "3 professional products",
-      "Perfect as a gift",
-    ],
-    usageSteps: [
-      "Start with DBS Car Shine for overall protection",
-      "Use Scratch Remover Pro on problem areas",
-      "Finish with Nano Gloss Polish for showroom shine",
+      "Dashboard Shiner",
+      "Stain Remover",
+      "Waterless Spray Cleaner",
     ],
   },
 ];

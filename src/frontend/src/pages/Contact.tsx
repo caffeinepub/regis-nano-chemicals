@@ -10,6 +10,7 @@ import {
   Send,
 } from "lucide-react";
 import { useState } from "react";
+import { SiInstagram, SiWhatsapp } from "react-icons/si";
 import { useFadeIn } from "../hooks/useFadeIn";
 
 interface FormData {
@@ -22,10 +23,7 @@ interface FormData {
 function FadeSection({
   children,
   className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+}: { children: React.ReactNode; className?: string }) {
   const { ref, isVisible } = useFadeIn();
   return (
     <section
@@ -75,9 +73,8 @@ export default function Contact() {
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    if (errors[name as keyof FormData]) {
+    if (errors[name as keyof FormData])
       setErrors((prev) => ({ ...prev, [name]: undefined }));
-    }
   };
 
   const contactDetails = [
@@ -89,16 +86,11 @@ export default function Contact() {
     },
     {
       icon: Phone,
-      label: "Phone",
-      value: "+91 9353240921",
-      href: "tel:+919353240921",
+      label: "Phone / WhatsApp",
+      value: "+91 7483540921",
+      href: "tel:+917483540921",
     },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "India",
-      href: "#",
-    },
+    { icon: MapPin, label: "Location", value: "India", href: "#" },
   ];
 
   return (
@@ -119,9 +111,35 @@ export default function Contact() {
             Contact <span className="text-brand-yellow">Us</span>
           </h1>
           <p className="text-white/70 font-inter text-base mt-4 max-w-xl mx-auto fade-in-delay-3">
-            Have questions about our products? We're here to help. Reach out to
-            our team anytime.
+            Have questions about our products? Reach out via the form, WhatsApp,
+            or email.
           </p>
+        </div>
+      </div>
+
+      {/* Quick Contact Buttons */}
+      <div className="bg-white border-b border-brand-gray-mid py-5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center gap-3">
+          <a
+            href="https://wa.me/917483540921?text=Hello%20Pearl%20Shine%2C%20I%20have%20a%20query."
+            target="_blank"
+            rel="noopener noreferrer"
+            data-ocid="contact.primary_button"
+            className="flex items-center gap-2 px-5 py-3 rounded-xl bg-[#25D366] hover:bg-[#1ebe5d] text-white font-poppins font-600 text-sm transition-colors"
+          >
+            <SiWhatsapp className="w-4 h-4" />
+            Chat on WhatsApp
+          </a>
+          <a
+            href="https://www.instagram.com/regis_nano_chemicals"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-ocid="contact.secondary_button"
+            className="flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-poppins font-600 text-sm transition-all"
+          >
+            <SiInstagram className="w-4 h-4" />
+            @regis_nano_chemicals
+          </a>
         </div>
       </div>
 
@@ -133,7 +151,10 @@ export default function Contact() {
             <div className="lg:col-span-3">
               <div className="bg-white rounded-3xl shadow-card border border-brand-gray-mid p-8 lg:p-10">
                 {submitted ? (
-                  <div className="flex flex-col items-center justify-center py-12 text-center">
+                  <div
+                    className="flex flex-col items-center justify-center py-12 text-center"
+                    data-ocid="contact.success_state"
+                  >
                     <div className="w-20 h-20 rounded-full bg-brand-yellow/20 flex items-center justify-center mb-6">
                       <CheckCircle2 className="w-10 h-10 text-brand-blue" />
                     </div>
@@ -141,9 +162,8 @@ export default function Contact() {
                       Message Sent!
                     </h3>
                     <p className="text-brand-gray-text font-inter text-base max-w-sm">
-                      Thank you for reaching out,{" "}
-                      <strong>{formData.name}</strong>! Our team will get back
-                      to you within 24 hours.
+                      Thank you, <strong>{formData.name}</strong>! We'll get
+                      back to you shortly.
                     </p>
                     <button
                       type="button"
@@ -176,7 +196,6 @@ export default function Contact() {
                         </p>
                       </div>
                     </div>
-
                     <form onSubmit={handleSubmit} className="space-y-5">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div className="space-y-1.5">
@@ -187,6 +206,7 @@ export default function Contact() {
                             Full Name <span className="text-red-500">*</span>
                           </Label>
                           <Input
+                            data-ocid="contact.input"
                             id="name"
                             name="name"
                             value={formData.name}
@@ -195,7 +215,6 @@ export default function Contact() {
                             className={`rounded-xl border-brand-gray-mid focus:border-brand-blue focus:ring-brand-blue/20 font-inter ${
                               errors.name ? "border-red-400" : ""
                             }`}
-                            data-ocid="contact.input"
                           />
                           {errors.name && (
                             <p className="text-red-500 text-xs font-inter">
@@ -212,6 +231,7 @@ export default function Contact() {
                             <span className="text-red-500">*</span>
                           </Label>
                           <Input
+                            data-ocid="contact.input"
                             id="email"
                             name="email"
                             type="email"
@@ -229,7 +249,6 @@ export default function Contact() {
                           )}
                         </div>
                       </div>
-
                       <div className="space-y-1.5">
                         <Label
                           htmlFor="phone"
@@ -238,6 +257,7 @@ export default function Contact() {
                           Phone Number <span className="text-red-500">*</span>
                         </Label>
                         <Input
+                          data-ocid="contact.input"
                           id="phone"
                           name="phone"
                           type="tel"
@@ -254,7 +274,6 @@ export default function Contact() {
                           </p>
                         )}
                       </div>
-
                       <div className="space-y-1.5">
                         <Label
                           htmlFor="message"
@@ -263,16 +282,16 @@ export default function Contact() {
                           Message <span className="text-red-500">*</span>
                         </Label>
                         <Textarea
+                          data-ocid="contact.textarea"
                           id="message"
                           name="message"
                           value={formData.message}
                           onChange={handleChange}
-                          placeholder="Tell us how we can help you..."
+                          placeholder="Tell us how we can help..."
                           rows={5}
                           className={`rounded-xl border-brand-gray-mid focus:border-brand-blue focus:ring-brand-blue/20 font-inter resize-none ${
                             errors.message ? "border-red-400" : ""
                           }`}
-                          data-ocid="contact.textarea"
                         />
                         {errors.message && (
                           <p className="text-red-500 text-xs font-inter">
@@ -280,12 +299,11 @@ export default function Contact() {
                           </p>
                         )}
                       </div>
-
                       <button
+                        data-ocid="contact.submit_button"
                         type="submit"
                         disabled={loading}
                         className="yellow-btn w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-base font-poppins font-700 shadow-yellow disabled:opacity-70 disabled:cursor-not-allowed"
-                        data-ocid="contact.submit_button"
                       >
                         {loading ? (
                           <>
@@ -309,11 +327,10 @@ export default function Contact() {
             <div className="lg:col-span-2 space-y-6">
               <div>
                 <h2 className="font-poppins font-800 text-brand-blue text-2xl mb-2">
-                  Company Details
+                  Pearl Shine
                 </h2>
                 <div className="w-12 h-1 bg-brand-yellow rounded-full mb-6" />
               </div>
-
               {contactDetails.map(({ icon: Icon, label, value, href }) => (
                 <a
                   key={label}
@@ -333,8 +350,26 @@ export default function Contact() {
                   </div>
                 </a>
               ))}
-
-              {/* Map Placeholder */}
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/regis_nano_chemicals"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-4 p-5 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl border border-pink-200 hover:border-pink-400 hover:shadow-card transition-all duration-200 group"
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
+                  <SiInstagram className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="font-poppins font-600 text-brand-gray-text text-xs uppercase tracking-wider mb-1">
+                    Instagram
+                  </p>
+                  <p className="font-inter font-500 text-brand-black text-sm">
+                    @regis_nano_chemicals
+                  </p>
+                </div>
+              </a>
+              {/* Map placeholder */}
               <div className="rounded-2xl overflow-hidden border border-brand-gray-mid shadow-card">
                 <div
                   className="h-48 flex items-center justify-center relative"
@@ -367,7 +402,6 @@ export default function Contact() {
                   </p>
                 </div>
               </div>
-
               {/* Business Hours */}
               <div className="p-5 bg-brand-blue rounded-2xl shadow-blue">
                 <h3 className="font-poppins font-700 text-white text-sm mb-3">
@@ -375,15 +409,9 @@ export default function Contact() {
                 </h3>
                 <div className="space-y-1.5 text-sm font-inter">
                   <div className="flex justify-between text-white/80">
-                    <span>Monday – Friday</span>
+                    <span>Monday – Saturday</span>
                     <span className="text-brand-yellow font-500">
-                      9:00 AM – 6:00 PM
-                    </span>
-                  </div>
-                  <div className="flex justify-between text-white/80">
-                    <span>Saturday</span>
-                    <span className="text-brand-yellow font-500">
-                      10:00 AM – 4:00 PM
+                      10:00 AM – 6:00 PM
                     </span>
                   </div>
                   <div className="flex justify-between text-white/80">

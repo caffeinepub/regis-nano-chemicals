@@ -5,34 +5,18 @@ import type { Product } from "../data/products";
 interface ProductCardProps {
   product: Product;
   className?: string;
-  onBuyNow?: () => void;
 }
 
 export default function ProductCard({
   product,
   className = "",
-  onBuyNow,
 }: ProductCardProps) {
-  const { addItem } = useCart();
+  const { addToCart } = useCart();
 
-  const savings =
-    product.isBundle && product.originalPriceValue && product.priceValue
-      ? product.originalPriceValue - product.priceValue
-      : 0;
-
-  const handleAddToCart = () => {
-    addItem({
-      id: product.id,
-      name: product.name,
-      price: product.price,
-      priceValue: product.priceValue,
-      image: product.image,
-    });
-  };
-
-  const handleBuyNow = () => {
-    handleAddToCart();
-    if (onBuyNow) onBuyNow();
+  const handleWhatsAppBuyNow = () => {
+    const msg = `Hello Pearl Shine! I want to buy:\n\u2022 ${product.name} \u2013 ${product.price}\n\nPlease confirm availability.`;
+    const url = `https://wa.me/917483540921?text=${encodeURIComponent(msg)}`;
+    window.open(url, "_blank");
   };
 
   return (
@@ -51,7 +35,6 @@ export default function ProductCard({
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
         />
-
         {product.isBundle && (
           <div className="absolute top-3 left-3">
             <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-poppins font-700 bg-brand-yellow text-brand-black shadow-yellow">
@@ -60,7 +43,6 @@ export default function ProductCard({
             </span>
           </div>
         )}
-
         {!product.isBundle && product.badge && (
           <div className="absolute top-3 left-3">
             <span className="px-2.5 py-1 rounded-full text-xs font-poppins font-600 bg-brand-yellow text-brand-black shadow-yellow">
@@ -68,11 +50,10 @@ export default function ProductCard({
             </span>
           </div>
         )}
-
-        {product.isBundle && savings > 0 && (
+        {product.isBundle && (
           <div className="absolute top-3 right-3">
             <span className="px-2.5 py-1 rounded-full text-xs font-poppins font-700 bg-brand-blue text-white shadow-blue">
-              Save ₹{savings.toLocaleString("en-IN")}
+              Save More
             </span>
           </div>
         )}
@@ -83,7 +64,6 @@ export default function ProductCard({
         <h3 className="font-poppins font-700 text-brand-blue text-base leading-snug mb-1">
           {product.name}
         </h3>
-
         <div className="flex items-baseline gap-2 mb-3">
           <p className="font-poppins font-700 text-brand-black text-xl">
             {product.price}
@@ -94,7 +74,6 @@ export default function ProductCard({
             </p>
           )}
         </div>
-
         {product.isBundle &&
           product.includedProducts &&
           product.includedProducts.length > 0 && (
@@ -115,29 +94,26 @@ export default function ProductCard({
               </ul>
             </div>
           )}
-
         <p className="text-brand-gray-text text-sm font-inter leading-relaxed flex-1 mb-4">
           {product.description}
         </p>
-
-        {/* Action Buttons */}
         <div className="flex gap-2">
           <button
             type="button"
-            onClick={handleAddToCart}
-            className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-poppins font-600 border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-200"
-            data-ocid="product.add_button"
+            data-ocid="products.primary_button"
+            onClick={() => addToCart(product)}
+            className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-brand-blue hover:bg-brand-blue/90 text-white text-sm font-poppins font-600 transition-colors"
           >
-            <ShoppingCart className="w-3.5 h-3.5" />
+            <ShoppingCart className="w-4 h-4" />
             Add to Cart
           </button>
           <button
             type="button"
-            onClick={handleBuyNow}
-            className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-poppins font-600 yellow-btn shadow-yellow"
-            data-ocid="product.primary_button"
+            data-ocid="products.secondary_button"
+            onClick={handleWhatsAppBuyNow}
+            className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl yellow-btn text-sm font-poppins font-600 shadow-yellow"
           >
-            <Zap className="w-3.5 h-3.5" />
+            <Zap className="w-4 h-4" />
             Buy Now
           </button>
         </div>

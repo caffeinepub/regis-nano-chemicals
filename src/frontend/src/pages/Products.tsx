@@ -1,14 +1,4 @@
-import {
-  CheckCircle2,
-  MessageCircle,
-  Package,
-  ShieldCheck,
-  ShoppingBag,
-  Star,
-  Truck,
-} from "lucide-react";
-import { useState } from "react";
-import CartDrawer from "../components/CartDrawer";
+import { Package, ShoppingBag, Star } from "lucide-react";
 import ProductCard from "../components/ProductCard";
 import { products } from "../data/products";
 import { useFadeIn } from "../hooks/useFadeIn";
@@ -28,21 +18,12 @@ function FadeSection({
   );
 }
 
-const trustBadges = [
-  { icon: CheckCircle2, label: "100% Genuine Products" },
-  { icon: ShieldCheck, label: "Secure Payments" },
-  { icon: Truck, label: "Fast Delivery Across India" },
-  { icon: Star, label: "10,000+ Happy Customers" },
-];
-
 export default function Products() {
   const individualProducts = products.filter((p) => !p.isBundle);
   const bundleProducts = products.filter((p) => p.isBundle);
-  const [cartOpen, setCartOpen] = useState(false);
 
   return (
     <div className="overflow-x-hidden">
-      {/* Page Hero */}
       <div
         className="py-20 lg:py-28 relative overflow-hidden"
         style={{
@@ -58,29 +39,11 @@ export default function Products() {
             Our <span className="text-brand-yellow">Products</span>
           </h1>
           <p className="text-white/70 font-inter text-base mt-4 max-w-xl mx-auto fade-in-delay-3">
-            Professional-grade nano-technology car care solutions for every
-            need.
+            Professional-grade Pearl Shine car care solutions for every need.
           </p>
         </div>
       </div>
 
-      {/* Trust Badges */}
-      <div className="bg-brand-yellow">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-6 py-4">
-            {trustBadges.map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-2">
-                <Icon className="w-4 h-4 text-brand-black" />
-                <span className="font-poppins font-700 text-brand-black text-sm">
-                  {label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Bundle / Combo Section */}
       <FadeSection className="py-16 bg-brand-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-10">
@@ -92,7 +55,7 @@ export default function Products() {
                 </span>
               </div>
               <h2 className="font-poppins font-800 text-brand-blue text-2xl sm:text-3xl">
-                Bundle &amp; Save
+                Bundle & Save
               </h2>
               <p className="text-brand-gray-text font-inter text-sm mt-1">
                 Get more for less with our exclusive combo kit
@@ -105,21 +68,16 @@ export default function Products() {
               </span>
             </div>
           </div>
-
           <div className="flex flex-wrap justify-center gap-6">
             {bundleProducts.map((product) => (
               <div key={product.id} className="w-full sm:w-80 lg:w-96">
-                <ProductCard
-                  product={product}
-                  onBuyNow={() => setCartOpen(true)}
-                />
+                <ProductCard product={product} />
               </div>
             ))}
           </div>
         </div>
       </FadeSection>
 
-      {/* Individual Products Grid */}
       <FadeSection className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-12">
@@ -138,20 +96,14 @@ export default function Products() {
               </span>
             </div>
           </div>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {individualProducts.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                onBuyNow={() => setCartOpen(true)}
-              />
+              <ProductCard key={product.id} product={product} />
             ))}
           </div>
         </div>
       </FadeSection>
 
-      {/* Why Choose Pearl Shine */}
       <FadeSection className="py-20 bg-brand-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -178,7 +130,7 @@ export default function Products() {
               {
                 title: "Professional Results",
                 desc: "Achieve showroom-quality results at home with our easy-to-use professional formulations.",
-                highlight: "9H",
+                highlight: "3X",
               },
             ].map(({ title, desc, highlight }) => (
               <div
@@ -200,7 +152,6 @@ export default function Products() {
         </div>
       </FadeSection>
 
-      {/* CTA */}
       <FadeSection>
         <div
           className="py-16"
@@ -218,29 +169,15 @@ export default function Products() {
               Our team is ready to help you find the perfect product for your
               car care needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="yellow-btn inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-poppins font-700 shadow-yellow"
-              >
-                Contact Our Experts
-              </a>
-              <a
-                href="https://wa.me/919353240921?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Pearl%20Shine%20products."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-poppins font-600 text-white border border-white/30 hover:bg-white/10 transition-all duration-200"
-              >
-                <MessageCircle className="w-5 h-5" />
-                Chat on WhatsApp
-              </a>
-            </div>
+            <a
+              href="/contact"
+              className="yellow-btn inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-poppins font-700 shadow-yellow"
+            >
+              Contact Our Experts
+            </a>
           </div>
         </div>
       </FadeSection>
-
-      {/* Cart Drawer */}
-      <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} />
     </div>
   );
 }

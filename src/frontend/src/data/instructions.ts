@@ -12,110 +12,83 @@ export interface ProductInstruction {
 
 export const instructions: ProductInstruction[] = [
   {
-    id: "dbs-car-shine",
-    name: "DBS Car Shine Solution",
+    id: "dashboard-shiner",
+    name: "Dashboard Shiner",
     color: "blue",
     steps: [
       {
-        icon: "droplets",
-        text: "Wash the car surface thoroughly with clean water and car shampoo.",
-      },
-      {
-        icon: "wind",
-        text: "Dry the surface completely using a clean microfiber towel.",
+        icon: "trash-2",
+        text: "Remove dust and debris from the dashboard and interior surfaces using a dry cloth.",
       },
       {
         icon: "spray-can",
-        text: "Apply a small amount of DBS Car Shine Solution onto a microfiber cloth.",
+        text: "Spray Dashboard Shiner lightly onto a clean microfiber applicator cloth.",
       },
       {
-        icon: "rotate-cw",
-        text: "Spread evenly across the surface in smooth circular motions.",
+        icon: "move",
+        text: "Apply evenly across the dashboard, door panels, and all interior trim surfaces.",
+      },
+      {
+        icon: "clock",
+        text: "Allow 1\u20132 minutes for the formula to bond and restore shine.",
       },
       {
         icon: "sparkles",
-        text: "Buff gently with a clean dry cloth for a brilliant glossy finish.",
+        text: "Buff lightly for a glossy finish that protects and leaves a fresh fragrance.",
       },
     ],
   },
   {
-    id: "scratch-remover-pro",
-    name: "Scratch Remover Pro",
+    id: "stain-remover",
+    name: "Stain Remover",
     color: "yellow",
     steps: [
       {
         icon: "search",
-        text: "Clean the scratched area with soap and water, then dry completely.",
+        text: "Identify the stained area on the car interior, fabric, or surface.",
       },
       {
-        icon: "pipette",
-        text: "Apply a pea-sized amount of Scratch Remover Pro to an applicator pad.",
+        icon: "spray-can",
+        text: "Spray Stain Remover directly onto the stained area generously.",
       },
       {
-        icon: "move",
-        text: "Work the compound into the scratch using firm back-and-forth strokes.",
+        icon: "clock",
+        text: "Let it sit for 1\u20132 minutes to break down and loosen the stain.",
       },
       {
         icon: "rotate-cw",
-        text: "Switch to circular motions to blend the compound into the surrounding paint.",
+        text: "Scrub gently with a microfiber cloth or soft brush in circular motions.",
       },
       {
         icon: "sparkles",
-        text: "Wipe off residue with a clean microfiber cloth and inspect the result.",
+        text: "Wipe clean with a dry cloth to reveal a stain-free, fresh surface.",
       },
     ],
   },
   {
-    id: "nano-gloss-polish",
-    name: "Nano Gloss Polish",
+    id: "waterless-spray-cleaner",
+    name: "Waterless Spray Cleaner",
     color: "blue",
     steps: [
       {
         icon: "car",
-        text: "Ensure the car is clean and dry before application.",
-      },
-      {
-        icon: "pipette",
-        text: "Apply 2–3 drops of Nano Gloss Polish onto a foam applicator pad.",
-      },
-      {
-        icon: "rotate-cw",
-        text: "Work in small sections using overlapping circular motions.",
-      },
-      {
-        icon: "clock",
-        text: "Allow the polish to haze for 3–5 minutes before buffing.",
-      },
-      {
-        icon: "sparkles",
-        text: "Buff off with a premium microfiber cloth for a showroom-quality shine.",
-      },
-    ],
-  },
-  {
-    id: "interior-shield",
-    name: "Interior Shield Protectant",
-    color: "yellow",
-    steps: [
-      {
-        icon: "trash-2",
-        text: "Remove dust and debris from interior surfaces with a dry cloth.",
+        text: "No pre-wash needed — use directly on the car body or glass surface.",
       },
       {
         icon: "spray-can",
-        text: "Spray Interior Shield Protectant lightly onto a microfiber applicator.",
+        text: "Spray Waterless Spray Cleaner evenly across one panel or section at a time.",
       },
       {
         icon: "move",
-        text: "Apply evenly across dashboard, door panels, and trim surfaces.",
+        text: "Gently wipe with a clean microfiber cloth to lift and remove dirt particles.",
       },
       {
-        icon: "clock",
-        text: "Allow 2–3 minutes for the formula to bond with the surface.",
+        icon: "rotate-cw",
+        text: "Flip the cloth to a clean side and buff the surface to activate the coating.",
       },
       {
-        icon: "check-circle",
-        text: "Buff lightly for a clean, satin finish that repels dust and UV rays.",
+        icon: "sparkles",
+        text: "Enjoy a spotless finish with body coating and glass lamination protection.",
       },
     ],
   },
